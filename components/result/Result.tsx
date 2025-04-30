@@ -8,7 +8,7 @@ import ResultRestart from './ResultRestart';
 const Results = () => {
 	return (
 		<View style={styles.container}>
-			<Text style={styles.title}>Results</Text>
+			<Text style={styles.title}>You have passed the test!</Text>
 
 			<ResultScore />
 
