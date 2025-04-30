@@ -5,9 +5,9 @@ import { useStore } from '@/hooks/useStore';
 
 import Button from '../buttons/Button';
 
-type Props = { title: string; index: number };
+import { AnswerProps } from '@/types/components/AnswerProps';
 
-const Answer: FC<Props> = ({ title, index }) => {
+const Answer: FC<AnswerProps> = ({ title, index }) => {
 	const { appStore } = useStore();
 
 	const isSelected = appStore.selectedAnswer === index;

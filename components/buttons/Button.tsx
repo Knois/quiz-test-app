@@ -1,14 +1,14 @@
 import { FC, memo } from 'react';
 import { StyleSheet, Text, TouchableOpacity } from 'react-native';
 
-type Props = {
-	title: string;
-	handlePress: () => void;
-	isControls?: boolean;
-	isSelected?: boolean;
-};
+import { ButtonProps } from '@/types/components/ButtonProps';
 
-const Answer: FC<Props> = ({ title, handlePress, isControls, isSelected }) => {
+const Answer: FC<ButtonProps> = ({
+	title,
+	handlePress,
+	isControls,
+	isSelected,
+}) => {
 	return (
 		<TouchableOpacity
 			onPress={handlePress}

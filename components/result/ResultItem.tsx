@@ -1,11 +1,12 @@
 import { View, Text, StyleSheet } from 'react-native';
 import { FC, memo } from 'react';
+import { ResultItemProps } from '@/types/components/ResultItemProps';
 
-import { IQuestion } from '@/types/Question';
-
-type Props = { question: IQuestion; userAnswer: number; isCorrect: boolean };
-
-const ResultItem: FC<Props> = ({ question, userAnswer, isCorrect }) => {
+const ResultItem: FC<ResultItemProps> = ({
+	question,
+	userAnswer,
+	isCorrect,
+}) => {
 	return (
 		<View style={styles.item}>
 			<Text style={styles.question}>{question.question}</Text>

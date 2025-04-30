@@ -16,11 +16,5 @@
 		"options": ["Oxygen", "Nitrogen", "Carbon Dioxide", "Hydrogen"],
 		"correct": 2,
 		"explanation": "Plants absorb carbon dioxide during photosynthesis."
-	},
-	{
-		"question": "What qweqwe",
-		"options": ["ee", "ww", "ee Dioxide", "tt"],
-		"correct": 2,
-		"explanation": "adad."
 	}
 ]

@@ -1,5 +1,6 @@
-import { stores } from '@/stores';
 import { createContext, useContext } from 'react';
+
+import { stores } from '@/stores';
 
 export const StoreContext = createContext(stores);
 

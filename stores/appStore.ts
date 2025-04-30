@@ -1,6 +1,7 @@
 import { makeAutoObservable, runInAction } from 'mobx';
 
 import questions from '@/assets/questions.json';
+
 import { IQuestion } from '@/types/Question';
 
 const store = () =>

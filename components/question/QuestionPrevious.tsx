@@ -5,7 +5,6 @@ import { useStore } from '@/hooks/useStore';
 
 import Button from '../buttons/Button';
 
-
 const QuestionPrevious = () => {
 	const { appStore } = useStore();
 
