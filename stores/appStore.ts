@@ -11,22 +11,53 @@ const store = () =>
 		isFinished: false as boolean,
 
 		get score() {
-			return this.userAnswers.reduce((acc, answer, index) => {
-				return acc + (answer === this.questions[index].correct ? 1 : 0);
-			}, 0);
+			return this.userAnswers.reduce(
+				(acc: number, answer: number, index: number) => {
+					return acc + (answer === this.questions[index].correct ? 1 : 0);
+				},
+				0
+			);
 		},
 
 		get currentQuestion() {
 			return this.questions[this.currentQuestionIndex] as IQuestion;
 		},
 
-		answerQuestion(answerIndex: number) {
-			this.userAnswers.push(answerIndex);
+		get selectedAnswer() {
+			return this.userAnswers[this.currentQuestionIndex] ?? null;
+		},
 
-			if (this.currentQuestionIndex + 1 === this.questions.length) {
+		get showBackButton() {
+			return this.currentQuestionIndex > 0;
+		},
+
+		get showNextButton() {
+			return this.currentQuestionIndex < this.questions.length;
+		},
+
+		get isLastQuestion() {
+			return this.currentQuestionIndex === this.questions.length - 1;
+		},
+
+		selectAnswer(answerIndex: number) {
+			if (this.userAnswers.length > this.currentQuestionIndex) {
+				this.userAnswers[this.currentQuestionIndex] = answerIndex;
+			} else {
+				this.userAnswers.push(answerIndex);
+			}
+		},
+
+		goNext() {
+			if (this.currentQuestionIndex === this.questions.length - 1) {
 				this.isFinished = true;
 			} else {
 				this.currentQuestionIndex++;
+			}
+		},
+
+		goPrevious() {
+			if (this.currentQuestionIndex > 0) {
+				this.currentQuestionIndex--;
 			}
 		},
 

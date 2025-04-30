@@ -22,5 +22,5 @@ const Screen = () => {
 export default observer(Screen);
 
 const styles = StyleSheet.create({
-	screen: { flex: 1, paddingHorizontal: 16 },
+	screen: { flex: 1, paddingHorizontal: 16,backgroundColor: '#fff' },
 });

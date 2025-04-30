@@ -10,9 +10,13 @@ type Props = { title: string; index: number };
 const Answer: FC<Props> = ({ title, index }) => {
 	const { appStore } = useStore();
 
-	const handlePress = () => appStore.answerQuestion(index);
+	const isSelected = appStore.selectedAnswer === index;
 
-	return <Button title={title} handlePress={handlePress} />;
+	const handlePress = () => appStore.selectAnswer(index);
+
+	return (
+		<Button title={title} handlePress={handlePress} isSelected={isSelected} />
+	);
 };
 
 export default observer(Answer);
