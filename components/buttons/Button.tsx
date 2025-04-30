@@ -6,7 +6,7 @@ type Props = { title: string; handlePress: () => void };
 const Answer: FC<Props> = ({ title, handlePress }) => {
 	return (
 		<TouchableOpacity onPress={handlePress} style={styles.button}>
-			<Text style={styles.text}>{title}</Text>
+			<Text allowFontScaling={false} style={styles.text}>{title}</Text>
 		</TouchableOpacity>
 	);
 };

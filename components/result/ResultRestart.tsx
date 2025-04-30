@@ -2,9 +2,9 @@ import { observer } from 'mobx-react-lite';
 
 import { useStore } from '@/hooks/useStore';
 
-import Button from './buttons/Button';
+import Button from '../buttons/Button';
 
-const Restart = () => {
+const ResultRestart = () => {
 	const { appStore } = useStore();
 
 	const handlePress = () => appStore.restartQuiz();
@@ -12,4 +12,4 @@ const Restart = () => {
 	return <Button title='Restart' handlePress={handlePress} />;
 };
 
-export default observer(Restart);
+export default observer(ResultRestart);
