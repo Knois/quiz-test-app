@@ -1,0 +1,26 @@
+[
+	{
+		"question": "What is the powerhouse of the cell?",
+		"options": ["Nucleus", "Mitochondria", "Ribosome", "Chloroplast"],
+		"correct": 1,
+		"explanation": "Mitochondria are the powerhouse of the cell."
+	},
+	{
+		"question": "Which planet is known as the Red Planet?",
+		"options": ["Earth", "Mars", "Jupiter", "Venus"],
+		"correct": 1,
+		"explanation": "Mars is often called the Red Planet."
+	},
+	{
+		"question": "What gas do plants absorb from the atmosphere?",
+		"options": ["Oxygen", "Nitrogen", "Carbon Dioxide", "Hydrogen"],
+		"correct": 2,
+		"explanation": "Plants absorb carbon dioxide during photosynthesis."
+	},
+	{
+		"question": "What qweqwe",
+		"options": ["ee", "ww", "ee Dioxide", "tt"],
+		"correct": 2,
+		"explanation": "adad."
+	}
+]
